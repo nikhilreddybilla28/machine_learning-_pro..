@@ -1,3 +1,7 @@
+''' code for predicting class of a flower using the length&width of petal&sepal 
+@KNN_Classifier   
+@20 sept,2019 '''
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -41,4 +45,5 @@ plt.legend()
 plt.show()
 
 '''here we can get acuracy=1 , which i got by chaning random state and n_neighbours,but i got precise and
-accurate for n_neighbors=3'''  
+accurate for n_neighbors=3'''
+#High accuracy with low precision may lead to misclassifcation for further data,so accurate and precise model will be robust.
