@@ -1,2 +1,2 @@
-# machine_learning-_pro..
+# machine_learning-_proj..
 basic projects of ml
