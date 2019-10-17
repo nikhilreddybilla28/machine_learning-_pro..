@@ -15,9 +15,9 @@ import matplotlib.pyplot as plt
 dsp=pd.read_csv('pass.csv')
 dsf=pd.read_csv('FAIL.csv')
 x=dsp.iloc[:,2:].values
-xf=dsf.iloc[:,2:].values
+x_f=dsf.iloc[:,2:].values
 x=np.append(arr=np.ones((150,1)).astype(int),values=x , axis=1 )
-xf=np.append(arr=np.ones((50,1)).astype(int),values=xf , axis=1 )
+x_f=np.append(arr=np.ones((50,1)).astype(int),values=x_f , axis=1 )
 
 #fitting model with data
 from sklearn.cluster import KMeans
@@ -33,7 +33,7 @@ plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],color='green',label='P')
 plt.scatter(x[y_kmeans==3,0],x[y_kmeans==3,1],color='yellow',label='B')
 plt.scatter(x[y_kmeans==4,0],x[y_kmeans==4,1],color='cyan',label='C')
 plt.scatter(x[y_kmeans==5,0],x[y_kmeans==5,1],color='magenta',label='ex')
-plt.scatter(xf[:,0],dsf.iloc[:,2],color='red',label='FAIL')
+plt.scatter(x_f[:,0],dsf.iloc[:,2],color='red',label='FAIL')
 plt.title('relative_grade clustering')
 plt.ylabel('marks')
 plt.legend()
